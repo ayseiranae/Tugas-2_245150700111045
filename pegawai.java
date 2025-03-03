@@ -49,14 +49,6 @@ class Pegawai {
         System.out.print(String.format("%-" + separator + "s: %" + (width - separator - 2) + "s\n", label, value));
     }
 
-    void center(String text) {
-        int tengah = (50 - text.length()) / 2;        
-        for (int i = 0; i < tengah; i++) {
-            System.out.print(" ");
-        }        
-        System.out.println(text);
-    }
-
     public void displayInfo() {
         System.out.println();
         System.out.println("__________________________________________________");
@@ -65,9 +57,9 @@ class Pegawai {
         justify("Jabatan ", jabatan);
         justify("Gaji Pokok ", currencyFormat.format(gajiPokok));
         justify("Tunjangan ", currencyFormat.format(tunjangan));
-        justify("Potongan : ", currencyFormat.format(potongan));
-        justify("Bonus : ", currencyFormat.format(bonus));
-        justify("Total Gaji : ", currencyFormat.format(hitungGajiTotal()));
+        justify("Potongan ", currencyFormat.format(potongan));
+        justify("Bonus ", currencyFormat.format(bonus));
+        justify("Total Gaji ", currencyFormat.format(hitungGajiTotal()));
         System.out.println("__________________________________________________");
         System.out.println();
     }
